@@ -103,13 +103,76 @@
       </div>
     </section>
 
-    <!-- SIGNUP FORM -->
+        <!-- MENU SECTION -->
+    <section class="section container" id="menu">
+      <h2>Our Tea & Pastry Menu</h2>
+      <p class="lead">Enjoy handcrafted teas and baked treats — made fresh daily for you (and admired by the cats).</p>
+
+      <div class="menu-grid">
+        <div class="menu-item">
+          <h3>🍵 Jasmine Green Tea</h3>
+          <p>Light, floral, and soothing — our house favorite. Served hot or iced.</p>
+          <span class="price">$4.00</span>
+        </div>
+        <div class="menu-item">
+          <h3>🫖 Earl Grey Cream</h3>
+          <p>A classic black tea with notes of bergamot and vanilla.</p>
+          <span class="price">$4.50</span>
+        </div>
+        <div class="menu-item">
+          <h3>🌿 Matcha Latte</h3>
+          <p>Stone-ground Japanese matcha blended with your choice of milk.</p>
+          <span class="price">$5.00</span>
+        </div>
+        <div class="menu-item">
+          <h3>🥐 Butter Croissant</h3>
+          <p>Flaky, golden, and freshly baked every morning.</p>
+          <span class="price">$3.25</span>
+        </div>
+        <div class="menu-item">
+          <h3>🍪 Cat-Shaped Cookie</h3>
+          <p>Sweet sugar cookie with cute cat faces — baked in-house.</p>
+          <span class="price">$2.75</span>
+        </div>
+        <div class="menu-item">
+          <h3>🧁 Lavender Cupcake</h3>
+          <p>Light lavender cake topped with creamy vanilla frosting.</p>
+          <span class="price">$3.75</span>
+        </div>
+      </div>
+    </section>
+
+      <!-- ADOPTABLE CATS -->
+    <section class="section container" id="cats">
+      <h2>Meet Our Adoptable Cats</h2>
+      <p class="lead">All of our cats are friendly, playful, and looking for their forever homes. Come visit and meet them in the lounge!</p>
+
+      <div class="cat-grid">
+        <div class="cat-card">
+          <img src="images/cat1.jpg" alt="Adoptable cat Luna" />
+          <h3>Luna</h3>
+          <p>A calm cuddle bug who loves warm laps and soft blankets. 2 years old.</p>
+        </div>
+        <div class="cat-card">
+          <img src="images/cat2.jpg" alt="Adoptable cat Mochi" />
+          <h3>Mochi</h3>
+          <p>Playful and curious, always chasing feather toys. 1 year old.</p>
+        </div>
+        <div class="cat-card">
+          <img src="images/cat3.jpg" alt="Adoptable cat Tofu" />
+          <h3>Tofu</h3>
+          <p>A shy sweetheart who warms up quickly with treats. 3 years old.</p>
+        </div>
+      </div>
+    </section>
+
+      <!-- SIGNUP FORM -->
     <section class="section container" id="signup">
       <h2>Get early access</h2>
       <p class="lead">Join the list for opening day, reservations, and exclusive events. We’ll send only the good stuff.</p>
 
       <div class="form-wrap">
-        <form>
+        <form id="signupForm">
           <div class="grid-2">
             <div>
               <label for="name">Full Name *</label>
@@ -119,6 +182,15 @@
               <label for="email">Email *</label>
               <input id="email" type="email" required />
             </div>
+          </div>
+
+          <div>
+            <label for="interest">Are you interested in adopting a cat?</label>
+            <select id="interest" name="interest">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+              <option value="maybe">Maybe</option>
+            </select>
           </div>
 
           <label for="message">Message</label>
@@ -131,6 +203,10 @@
 
           <button class="btn primary" type="submit">Join the List</button>
         </form>
+
+      <p id="thankYou" class="thank-you-message" hidden role="status" aria-live="polite">
+  🐾 Purrrrrrfect — Thank you for joing our email list!
+</p>
       </div>
     </section>
   </main>

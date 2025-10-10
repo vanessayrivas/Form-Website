@@ -1,4 +1,5 @@
 /* Place CSS styles here */
+/* Basic Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
   font-family: system-ui, sans-serif;
@@ -146,7 +147,7 @@ header {
 /* Cards */
 .cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 .card {
@@ -156,17 +157,85 @@ header {
   background: #fff;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
-@media (max-width: 900px) {
-  .cards {
-    grid-template-columns: 1fr 1fr;
-  }
-}
 @media (max-width: 600px) {
   .cards {
     grid-template-columns: 1fr;
   }
 }
 
+/* MENU GRID */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.menu-item {
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+.menu-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.menu-item p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+.price {
+  display: inline-block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #2f855a;
+}
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Adoptable Cats */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.cat-card {
+  border: 1px solid #e5e7eb;
+  padding: 1rem;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+.cat-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+}
+.cat-card h3 {
+  margin-bottom: 0.5rem;
+}
+.cat-card p {
+  color: #4b5563;
+  font-size: 0.95rem;
+}
+@media (max-width: 900px) {
+  .cat-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .cat-grid {
+    grid-template-columns: 1fr;
+  }
+}
 /* Form */
 .form-wrap {
   background: #fff;
@@ -228,4 +297,28 @@ footer {
   padding: 0.5rem;
   border: 2px solid #0ea5e9;
 }
+
+/* Thank-you message with reliable fade-in */
+.thank-you-message{
+  display: none;                /* default hidden (also hidden by [hidden]) */
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f0fff4;
+  border: 1px solid #a7f3d0;
+  border-radius: 10px;
+  color: #22543d;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(-5px);
+}
+.thank-you-message.show{
+  display: block;               /* becomes visible when .show is added */
+  animation: fadeIn .8s ease forwards;
+}
+@keyframes fadeIn{
+  from{ opacity:0; transform: translateY(-5px); }
+  to{   opacity:1; transform: translateY(0);    }
+}
+
 
