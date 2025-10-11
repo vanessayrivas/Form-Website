@@ -298,27 +298,5 @@ footer {
   border: 2px solid #0ea5e9;
 }
 
-/* Thank-you message with reliable fade-in */
-.thank-you-message{
-  display: none;                /* default hidden (also hidden by [hidden]) */
-  margin-top: 1rem;
-  padding: 1rem;
-  background: #f0fff4;
-  border: 1px solid #a7f3d0;
-  border-radius: 10px;
-  color: #22543d;
-  font-weight: 600;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(-5px);
-}
-.thank-you-message.show{
-  display: block;               /* becomes visible when .show is added */
-  animation: fadeIn .8s ease forwards;
-}
-@keyframes fadeIn{
-  from{ opacity:0; transform: translateY(-5px); }
-  to{   opacity:1; transform: translateY(0);    }
-}
 
 
