@@ -131,7 +131,7 @@ header {
   font-size: 1.1rem;
   font-weight: 600;
   color: #fff;
-  background-color: #2f855a;         
+  background-color: #ee9ce8;         
   border-radius: 50px;
   text-decoration: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -139,7 +139,7 @@ header {
 }
 
 .hero-btn:hover {
-  background-color: #276749;          
+  background-color: #f4a2d9;          
   transform: translateY(-2px);        
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
@@ -171,7 +171,7 @@ header {
 /* Primary (filled) button */
 .hero-btn.primary {
   color: #fff;
-  background-color: #2f855a;
+  background-color: #9AC66E;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 .hero-btn.primary:hover {
@@ -373,6 +373,21 @@ footer {
 }
 html {
   scroll-behavior: smooth;
+}
+/* LOGO STYLING */
+.logo {
+  height: 100px;          
+  width: auto;       
+  object-fit: contain;   
+  display: block;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 
