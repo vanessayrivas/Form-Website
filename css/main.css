@@ -64,25 +64,81 @@ header {
   display: none;
 }
 
-/* Mobile Menu */
+/* Base header */
+.nav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.brand { display: flex; align-items: center; gap: .5rem; }
+.logo  { height: 40px; width: auto; }
+
+/* Desktop nav */
+.nav ul { display: flex; gap: 1rem; list-style: none; }
+.hamburger { display: none; }
+
+/* Mobile overrides */
 @media (max-width: 768px) {
+  .nav { flex-wrap: wrap; }
+
+  /* Brand stays on its own row */
+  .brand {
+    flex: 1 1 100%;
+    justify-content: space-between;   /* logo left, burger right */
+  }
+
   .hamburger {
     display: block;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
+
+  /* Prepare dropdown container */
+  nav { width: 100%; }
+
+  /* Hide the list by default (no flashing text) */
   .nav ul {
     position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
+    left: 0; right: 0;
+    top: 100%;                 /* sits directly below the header row */
     background: #fff;
+    border-bottom: 1px solid #e5e7eb;
+    display: flex;
     flex-direction: column;
-    transform: translateY(-120%);
-    transition: transform 0.3s;
+    align-items: center;
+    padding: .75rem 0;
+
+    /* fully hidden until checked */
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity .2s ease, transform .2s ease, visibility 0s linear .2s;
+    z-index: 5;
   }
+
+  /* When menu is toggled ON */
   #menu-toggle:checked ~ nav ul {
+    visibility: visible;
+    opacity: 1;
     transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity .2s ease, transform .2s ease, visibility 0s;
+  }
+
+  .nav ul li { margin: .4rem 0; }
+
+  /* Make sure the CTA looks like a button in the dropdown */
+  .nav ul li .btn.primary {
+    display: inline-block;
+    padding: .6rem 1rem;
+    border-radius: 999px;
+    background: #2f855a;
+    color: #fff;
   }
 }
+
 
 .hero {
   position: relative;
