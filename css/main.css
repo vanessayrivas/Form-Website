@@ -22,3 +22,13 @@ img{
   text-align: center;
   margin-top: 100px;
 }
+
+svg {
+  max-width: 1500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.container {
+  display: flex;
+}
